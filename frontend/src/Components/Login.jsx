@@ -33,10 +33,14 @@ const Login = () => {
               },
             });
             console.log('Login successful:', response.data);
-            const { access_token: accessToken, user_id: userId } = response.data;
-            login(accessToken, userId);
-            // You can redirect or perform other actions upon successful login
-            navigate("/home");
+            if {
+                const { access_token: accessToken, user_id: userId } = response.data;
+                login(accessToken, userId);
+                // You can redirect or perform other actions upon successful login
+                navigate("/home");
+            } else {
+                    navigate('/home');
+                }
           } catch (error) {
             console.error('Login failed:', error.response.data);
             alert(error.response.data.detail);
