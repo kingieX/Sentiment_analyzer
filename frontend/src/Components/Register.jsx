@@ -39,9 +39,12 @@ const Register = () => {
                 if (!response.ok) {
                     const errorData = await response.json();
                     console.error('Error:', errorData);
-                } else {
+                } else if {
                     const responseData = await response.json();
                     console.log('Success:', responseData);
+                    navigate('/home');
+                }
+                else {
                     navigate('/home');
                 }
             } catch (error) {
